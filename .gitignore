@@ -14,6 +14,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+test/dummy/log/*.log
+test/dummy/tmp
+
 
 #ignore ipython/iruby notebooks
 /.ipynb_checkpoints
