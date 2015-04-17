@@ -1,7 +1,12 @@
 module IRails
 
   ENV["RAILS_ENV"] ||= 'development'
-  require ::File.expand_path('../../config/environment',  __FILE__)
+
+  if ENV["RAILS_ENV"] == 'test'
+    require ::File.expand_path('../../test/dummy/config/environment',  __FILE__)    
+  else
+    require ::File.expand_path('../../config/environment',  __FILE__)
+  end
   #require ::File.expand_path('../../config/application',  __FILE__)
     
   class OnetimeController < ActionController::Base;
